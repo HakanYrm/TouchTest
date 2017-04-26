@@ -35,8 +35,8 @@ public class MainActivity extends Activity {
     public TPTestView tpView;
     public int mDisplayWidth;
     public int mDisplayHeight;
-    private static final int numX = 12;
-    private static final int numY = 24;
+    public int numX;
+    public int numY;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -61,11 +61,20 @@ public class MainActivity extends Activity {
     }
 
     private void initTouchPanelTest(){
+
         Display myDisplay = getWindowManager().getDefaultDisplay();
-        Point size = new Point(); myDisplay.getSize(size); mDisplayHeight = 1280; mDisplayWidth = 720;
+        Point size = new Point(); myDisplay.getSize(size);
+        mDisplayWidth =size.x;
+        if (mDisplayWidth == 720) mDisplayHeight = 1280;
+                else if (mDisplayWidth==1080) mDisplayHeight = 1920;
+                else mDisplayHeight = size.y;
+
         Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, Integer.toString(mDisplayWidth)+ Integer.toString(mDisplayHeight), Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(context, Integer.toString(mDisplayWidth)+"x"+ Integer.toString(mDisplayHeight), Toast.LENGTH_LONG);
         toast.show();
+
+        numY = mDisplayHeight/100; //her kare 100*100 pixel
+        numX = mDisplayWidth/100;
 
         rectList = new ArrayList<Rect>(numX * numY);
 
@@ -102,7 +111,7 @@ public class MainActivity extends Activity {
                 canvas.drawRect(rect.x+1, rect.y+1, rect.x+rect.dx-1, rect.y+rect.dy-1, paint);
             }
             invalidate();
-            paint.setColor(Color.GREEN);
+            paint.setColor(Color.BLUE);
         }
 
         protected void onDraw(Canvas canvas){
@@ -151,12 +160,7 @@ public class MainActivity extends Activity {
 
     private class Rect{
         int x,y,dx,dy;
-        Rect(int x, int y, int dx, int dy)	{
-            this.x = x;
-            this.y = y;
-            this.dx = dx;
-            this.dy = dy;
-        }
+        Rect(int x, int y, int dx, int dy)	{this.x = x;this.y = y;this.dx = dx;this.dy = dy;}
 
         public boolean isInRect(int x, int y){
             if(mDebug)
@@ -167,18 +171,6 @@ public class MainActivity extends Activity {
                 return false;
             }
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        super.onCreateOptionsMenu(menu);
-
-//		menu.add(0,SUCCESS,0,R.string.success);
-//		menu.add(0,FAIL,0,R.string.fail);
-        //menu.add(0,SUCCESS,0,R.string.success);
-        //menu.add(0,FAIL,0,R.string.fail);
-
-        return true;
     }
 
     @Override
@@ -218,8 +210,8 @@ public class MainActivity extends Activity {
         Bundle b = new Bundle();
         Intent intent = new Intent();
         b.putInt("test_result", 1);
-
         intent.putExtras(b);
+
       /*  setResult(RESULT_OK, intent);
 
         Log.e(TAG,"--------------------------------------------PROTOCOL FORMAT----------------------------------------\n");
@@ -252,5 +244,17 @@ public class MainActivity extends Activity {
         //}
         ////////////////////////////////////////////
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        super.onCreateOptionsMenu(menu);
+
+//		menu.add(0,SUCCESS,0,R.string.success);
+//		menu.add(0,FAIL,0,R.string.fail);
+        //menu.add(0,SUCCESS,0,R.string.success);
+        //menu.add(0,FAIL,0,R.string.fail);
+
+        return true;
     }
 }

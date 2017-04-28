@@ -7,8 +7,10 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
@@ -17,13 +19,24 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import static android.content.ContentValues.TAG;
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
 public class MainActivity extends Activity {
@@ -37,15 +50,14 @@ public class MainActivity extends Activity {
     public int mDisplayHeight;
     public int numX;
     public int numY;
+    public FileOutputStream fileOutputStream;
+    public String result;
+    public static final String SHOW_RESULT = "com.example.w7.touchtest.ResultsActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         View decorView = getWindow().getDecorView();
-        // Hide both the navigation bar and the status bar.
-        // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
-        // a general rule, you should design your app to hide the status bar whenever you
-        // hide the navigation bar.
         int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -57,7 +69,10 @@ public class MainActivity extends Activity {
         initTouchPanelTest();
         tpView = new TPTestView(this);
         setContentView(tpView);
-
+        writeToFile(this,"deneme deneme deneemeeee");
+        String print_result = readFromFile(this);
+        Toast.makeText(this, print_result, Toast.LENGTH_LONG).show();
+        viewResult(tpView);
     }
 
     private void initTouchPanelTest(){
@@ -68,10 +83,6 @@ public class MainActivity extends Activity {
         if (mDisplayWidth == 720) mDisplayHeight = 1280;
                 else if (mDisplayWidth==1080) mDisplayHeight = 1920;
                 else mDisplayHeight = size.y;
-
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, Integer.toString(mDisplayWidth)+"x"+ Integer.toString(mDisplayHeight), Toast.LENGTH_LONG);
-        toast.show();
 
         numY = mDisplayHeight/100; //her kare 100*100 pixel
         numX = mDisplayWidth/100;
@@ -84,7 +95,13 @@ public class MainActivity extends Activity {
                 rectList.add(r);
             }
         }
+    }
 
+    private void viewResult(View view){
+        Intent intent = new Intent(this, ResultsActivity.class);
+        String message = readFromFile(this);
+        intent.putExtra(SHOW_RESULT, message);
+        startActivity(intent);
     }
 
     private class TPTestView extends View {
@@ -231,6 +248,54 @@ public class MainActivity extends Activity {
         //}
         ////////////////////////////////////////////
         finish();
+    }
+
+    private void writeToFile(Context context,String string){
+
+        String filename = "results.txt";
+        FileOutputStream outputStream;
+        File file = new File(context.getFilesDir(), filename);
+        try {
+            outputStream = openFileOutput(filename,Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+            }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private String readFromFile(Context context) {
+
+        String ret = "";
+
+        try {
+            InputStream inputStream = context.openFileInput("results.txt");
+
+            if ( inputStream != null ) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String receiveString = "";
+                StringBuilder stringBuilder = new StringBuilder();
+
+                while ( (receiveString = bufferedReader.readLine()) != null ) {
+                    stringBuilder.append(receiveString);
+                }
+
+                inputStream.close();
+                ret = stringBuilder.toString();
+                Toast.makeText(this, ret, Toast.LENGTH_LONG).show();
+            }
+
+            else Toast.makeText(this, "olmadı buuuuuu", Toast.LENGTH_LONG).show();
+        }
+        catch (FileNotFoundException e) {
+            Log.e("login activity", "File not found: " + e.toString());
+        } catch (IOException e) {
+            Log.e("login activity", "Can not read file: " + e.toString());
+        }
+
+        return ret;
     }
 
     @Override

@@ -9,6 +9,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.icu.text.DateFormat;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -33,6 +35,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 import static android.content.ContentValues.TAG;
@@ -50,7 +53,6 @@ public class MainActivity extends Activity {
     public int mDisplayHeight;
     public int numX;
     public int numY;
-    public FileOutputStream fileOutputStream;
     public String result;
     public static final String SHOW_RESULT = "com.example.w7.touchtest.ResultsActivity";
 
@@ -58,21 +60,13 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                | View.SYSTEM_UI_FLAG_IMMERSIVE;
+        int uiOptions = fullScreen();
         decorView.setSystemUiVisibility(uiOptions);
-
         initTouchPanelTest();
         tpView = new TPTestView(this);
         setContentView(tpView);
-        writeToFile(this,"deneme deneme deneemeeee");
-        String print_result = readFromFile(this);
-        Toast.makeText(this, print_result, Toast.LENGTH_LONG).show();
-        viewResult(tpView);
+        writeToFile(this,"        " + logTime() + "         :" + result + "\n" );
+
     }
 
     private void initTouchPanelTest(){
@@ -190,7 +184,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    @Override
+/*    @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
             case SUCCESS:
@@ -221,7 +215,7 @@ public class MainActivity extends Activity {
 
         finish();
 
-    }
+    }*/
 
     private void doAfterTest(){
         Bundle b = new Bundle();
@@ -253,16 +247,28 @@ public class MainActivity extends Activity {
     private void writeToFile(Context context,String string){
 
         String filename = "results.txt";
-        FileOutputStream outputStream;
         File file = new File(context.getFilesDir(), filename);
-        try {
-            outputStream = openFileOutput(filename,Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
-            outputStream.close();
-            }catch (Exception e) {
-            e.printStackTrace();
-        }
+        FileOutputStream outputStream = null;
 
+        if(file.exists()){
+            try {
+                outputStream = new FileOutputStream(file,true);
+                outputStream.write(string.getBytes());
+                //outputStream.write(System.lineSeparator());
+                outputStream.close();
+                }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else{
+            try {
+                outputStream = openFileOutput(filename,Context.MODE_PRIVATE);
+                outputStream.write(string.getBytes());
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private String readFromFile(Context context) {
@@ -279,12 +285,12 @@ public class MainActivity extends Activity {
                 StringBuilder stringBuilder = new StringBuilder();
 
                 while ( (receiveString = bufferedReader.readLine()) != null ) {
-                    stringBuilder.append(receiveString);
+                    stringBuilder.append(receiveString).append("\n");
                 }
 
                 inputStream.close();
                 ret = stringBuilder.toString();
-                Toast.makeText(this, ret, Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, ret, Toast.LENGTH_LONG).show();
             }
 
             else Toast.makeText(this, "olmadı buuuuuu", Toast.LENGTH_LONG).show();
@@ -308,6 +314,7 @@ public class MainActivity extends Activity {
         //e.printStackTrace();
         //}
         ////////////////////////////////////////////
+        viewResult(tpView);
         finish();
     }
 
@@ -322,4 +329,21 @@ public class MainActivity extends Activity {
 
         return true;
     }
+
+    public String logTime(){
+        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+        return currentDateTimeString;
+    }
+
+    public int fullScreen(){
+        int fullScreenInt = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                | View.SYSTEM_UI_FLAG_IMMERSIVE;
+        return fullScreenInt;
+    }
+
+
 }

@@ -2,19 +2,29 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <devices>
+          <device id="pixel_xl" />
+        </devices>
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6590a19d-97a4-41db-91f5-40f384f7eaa7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_touch_test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="TouchTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,31 +61,53 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-                <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-                <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TouchTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="2193">
+              <caret line="182" column="13" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initTouchPanelTest#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#TPTestView#0;class#TPTestView#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#writeToFile#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#onBackPressed#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#resultTime#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#fullScreen#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#takeScreenshot#0;class#TouchTest#0" expanded="false" />
+                <element signature="method#openScreenshot#0;class#TouchTest#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -1573,7 +1605,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\W7\Documents\GitHub\TouchTest" value="4479758213768" />
+        <entry key="C:\Users\W7\Documents\GitHub\TouchTest" value="4480248913587" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1877,18 +1909,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="D:/Projeler/AndroidProjeler/CIT/leo_2gb/Son_Montaj/app/src/main/java/vsp/vestel/son_montaj/TouchPanel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="D:/Projeler/AndroidProjeler/Vibrate APK/Vibration Apk Main/app/src/main/java/com/prgguru/android/VibratorQA.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1915,8 +1953,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1949,9 +1987,135 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TouchTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touchtest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1959,15 +2123,67 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="2770581516000040" />
-    <property name="last_opened_file_path" value="D:/Projeler/AndroidProjeler/CIT/leo_2gb/Son_Montaj/app/src/main/java/vsp/vestel/son_montaj/TouchPanel.java" />
+    <property name="device.picker.selection" value="0123456789ABCDEF" />
+    <property name="last_opened_file_path" value="D:/Projeler/AndroidProjeler/Vibrate APK/Vibration Apk Main" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.example.w7.touchtest" />
     </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.app">
+    <configuration default="false" name="TouchTest" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.w7.touchtest.TouchTest" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2254,9 +2470,15 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
+      <item index="1" class="java.lang.String" itemvalue="Android App.TouchTest" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Android App.TouchTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -2302,25 +2524,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.50586265" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6113903" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.6683417" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1728" y="30" width="1558" height="1062" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.6683417" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1690" y="30" width="1596" height="1054" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.49413735" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16414523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2348,28 +2570,79 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="182" column="13" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initTouchPanelTest#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#TPTestView#0;class#TPTestView#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#writeToFile#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#resultTime#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#fullScreen#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#takeScreenshot#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#openScreenshot#0;class#TouchTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initTouchPanelTest#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#TPTestView#0;class#TPTestView#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#writeToFile#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#resultTime#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#fullScreen#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#takeScreenshot#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#openScreenshot#0;class#TouchTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2387,18 +2660,61 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2426,18 +2742,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2447,18 +2752,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2468,18 +2762,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2489,18 +2772,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2510,18 +2782,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2531,18 +2792,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2552,18 +2802,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2597,18 +2836,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2628,18 +2856,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2659,18 +2876,7 @@
         <state relative-caret-position="1207">
           <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2690,18 +2896,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2713,42 +2908,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Projeler/AndroidProjeler/CIT/leo_2gb/Son_Montaj/app/src/main/java/vsp/vestel/son_montaj/TouchPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultShow.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2759,16 +2919,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="144">
           <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/FullscreenActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://C:/Users/W7/Documents/GitHub/TouchTest/app/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://D:/Projeler/AndroidProjeler/CIT/leo_2gb/Son_Montaj/app/src/main/java/vsp/vestel/son_montaj/TitresimManuel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Projeler/AndroidProjeler/CIT/leo_2gb/Son_Montaj/app/src/main/java/vsp/vestel/son_montaj/TouchPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="68">
+          <caret line="4" column="79" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -2776,23 +2964,78 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://D:/Projeler/AndroidProjeler/Vibrate APK/Vibration Apk Main/app/src/main/java/com/prgguru/android/VibratorQA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_touch_test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/ResultsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/TouchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="182" column="13" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initTouchPanelTest#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#TPTestView#0;class#TPTestView#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#writeToFile#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#resultTime#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#fullScreen#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#takeScreenshot#0;class#TouchTest#0" expanded="false" />
+            <element signature="method#openScreenshot#0;class#TouchTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/w7/touchtest/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+        <state relative-caret-position="629">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="method#initTouchPanelTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#viewResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#TPTestView#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#Rect#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#doAfterTest#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#writeToFile#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#logTime#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#fullScreen#0;class#MainActivity#0" expanded="false" />
-            <marker date="1493793597556" expanded="false" signature="6418:6695" ph="{...}" />
-            <marker date="1493793597556" expanded="false" signature="6740:7229" ph="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

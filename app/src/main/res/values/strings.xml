@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">TouchTest</string>
+    <string name="app_name">Touch Test</string>
+    <string name="button_results">Results</string>
+    <string name="button_startTouchTest">Start Touch Test</string>
 </resources>
